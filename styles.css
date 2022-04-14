@@ -1,0 +1,134 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    
+    grid-template-columns: repeat(7, 7rem);
+    grid-template-rows: 11rem 3rem 11rem;
+    gap: 0.5rem;
+
+    cursor: pointer; /*makes that if you click anywhere on the scree, it advances the game*/
+
+    justify-content: center;
+    padding-top: 1rem;
+    background-image: url("poke\ table.webp");
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.deck {
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    border-radius: 0.5rem;
+    color: white;
+    user-select: none; /*so people cannot select the text on the deck*/
+}
+
+.universal-deck {
+    background-color: orangered;
+    user-select: none;
+}
+
+.text {
+    grid-column: span 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    user-select: none;
+    color: white;
+}
+
+.player-score,
+.computer-score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    user-select: none;
+    color: white;
+}
+
+
+.card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
+
+.card.red {
+    color: red;
+    background-color: white;
+}
+
+.card.black {
+    color: black;
+    background-color: white;
+}
+
+.card::before {
+    content: attr(data-value); 
+    font-size: 5rem;
+}
+
+h1{
+    font-family: 'Kanit', sans-serif;
+    font-size: 35px;
+    text-align: center;
+    color:orangered;
+}
+
+.computer-card-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: red;
+    background-color: black;
+    text-align: center;
+    
+}
+
+.player-card-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: blue;
+    background-color: black;
+    text-align: center;
+}
+
+.deck-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+.score-title {
+    color: white;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
